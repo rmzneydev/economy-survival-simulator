@@ -1,36 +1,41 @@
 import random
 
+
+event = ""
 def gen_evento():
  random_event = random.randint(1, 8)
 
  if random_event == 1:
-    return [random_event, "temperatura a 80°C"]
+    event = "temperatura a 80°C"
         
  elif random_event == 2:
-    return [random_event, "falla en el sistema de refrigeracion"]
+    event = "falla en el sistema de refrigeracion"
 
  elif random_event == 3:
-    return [random_event, "sobrecarga electrica"]
+    event = "sobrecarga electrica"
 
  elif random_event == 4:
-    return [random_event, "incendio en sala tecnica"]
+    event = "incendio en sala tecnica"
     
  elif random_event == 5:
-     return [random_event, "inundaciones por tuberia rota"]
+     event = "inundaciones por tuberia rota"
 
  elif random_event == 6:
-    return [random_event, "ciberataque"]
+    event = "ciberataque"
 
  elif random_event == 7:
-    return [random_event, "colapso de la red"]
+    event = "colapso de la red"
     
  elif random_event == 8:
-    return [random_event, "virus interno"]
+    event = "virus interno"
+ print("Se presento el evento:", event)
+
+ return [random_event, event]
 
 
+# obtener = gen_evento()
+# print(obtener[0])
+# print(obtener[1])
 
-
- 
-print(gen_evento())
 
 
