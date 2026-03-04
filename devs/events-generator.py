@@ -1,47 +1,36 @@
 import random
 
+def gen_evento():
+ random_event = random.randint(1, 8)
 
+ if random_event == 1:
+    return [random_event, "temperatura a 80°C"]
+        
+ elif random_event == 2:
+    return [random_event, "falla en el sistema de refrigeracion"]
 
-random_event = random.randint(1, 10)
-print(random_event)
+ elif random_event == 3:
+    return [random_event, "sobrecarga electrica"]
 
-if random_event == 1:
-    print=("ola de calor extrema")
+ elif random_event == 4:
+    return [random_event, "incendio en sala tecnica"]
     
-if random_event == 2:
-    print=("falla en el sistema de refrigeracion")
+ elif random_event == 5:
+     return [random_event, "inundaciones por tuberia rota"]
 
-if random_event == 3:
-    print=("sobrecarga electrica")
+ elif random_event == 6:
+    return [random_event, "ciberataque"]
 
-if random_event == 4:
-    print=("incendio en sala tecnica")
+ elif random_event == 7:
+    return [random_event, "colapso de la red"]
     
-if random_event == 5:
-    print=("inundaciones por tuberia rota")
-
-if random_event == 6:
-    print=("ciberataque")
-
-if random_event == 7:
-    print=("colapso de la red")
-    
-if random_event == 8:
-    print=("virus interno")
-
-if random_event == 9:
-    print=("terremoto")
-
-if random_event == 10:
-    print=("recorte de personal")
-    
+ elif random_event == 8:
+    return [random_event, "virus interno"]
 
 
-   
-       
 
 
  
-
+print(gen_evento())
 
 
