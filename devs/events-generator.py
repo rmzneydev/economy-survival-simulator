@@ -3,7 +3,7 @@ import random
 
 event = ""
 def gen_evento():
- random_event = random.randint(1, 8)
+ random_event = random.randint(1, 9)
 
  if random_event == 1:
     event = "temperature to 80°C"
@@ -28,10 +28,11 @@ def gen_evento():
     
  elif random_event == 8:
     event = "internal virus"
+
+ elif random_event == 9:
+    event = "quiet day"
  print("The event was presented:", event)
 
  return [random_event, event]
-
-
 
 
