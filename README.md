@@ -39,3 +39,20 @@ Generated with `random.randint()`:
 - Storm (affects cooling)
 - Theft (reduces resources)
 - Bonanza (increases customers)
+
+## How to Run the Project
+From the terminal:
+
+python inicio.py
+
+## Failure Conditions
+- Temperature > 80°C
+- Server Capacity = 0
+- Cooling = 0
+- Clients = 0
+
+## Final Objective
+To survive 10 days while maintaining a balance between:
+- Customer demand
+- Operational capacity
+- Thermal control
