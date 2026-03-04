@@ -1,8 +1,5 @@
-# economy-survival-simulator
-This project consists of a 10-day resource management simulator, where the player manages a Data Center.
-
-# Survival Economy Simulator
-## Group 4 – Data Center Management
+# Economy Survival Simulator
+## Data Center Management
 ---
 ## Project Description
 This project consists of a 10-day resource management simulator where the player manages a data center.
