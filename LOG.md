@@ -39,11 +39,11 @@ Dev 6: Jhonatan Rodriguez
   - Impediment: A permissions issue  on the reposiroty
   - Solution: It was resolved by accepting the repository invitation as a contributor.
 
-## 📆 Day 3: -
-* Dev 1: esta traduciendo e implementando un cambio en la logica del codigo
-* dev 2: agregar el while a una funcion y actualizar la rama en github
-* Dev 3: eliminar eventos innecesarios y agregar funciones al codigo
-* Dev 4: agregar una funcion para disminuir recursos segun el evento, y una funcion para aumentar temperatura segun evento
-* Dev 5: agregar mas condicionales , decicion final y traducir
-* Dev 6: mejorando la logica del codigo y traduciendo
-reunion con el cliente en donde solicito el uso de funciones en el codigo }
+## 📆 Day 3: 
+Meeting with the client where they requested the use of functions in the code
+* Dev 1: Translating and implementinga change in the code logic
+* Dev 2: Add the while loop to a function and update the branch on GitHub
+* Dev 3: Remove unnecessay events and add function to the code
+* Dev 4: Add a function to decrase resources based on the event, and a function to increase temperature based on the event
+* Dev 5: Add more conditionals and translate
+* Dev 6: Improving the code logic and translating
