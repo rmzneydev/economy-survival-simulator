@@ -1,3 +1,10 @@
+from data_entry import setName, setDifficult, getResources
+
+name = setName()
+difficult = setDifficult()
+resource = getResources(difficult) 
+
+
 def MainLoop(): 
 
     # Creación de variables de prueba
