@@ -1,26 +1,27 @@
-servidores = 0
-refrigeracion= 0
-clientes = 0
-temperatura = 80
+def GameOver(servers, cooling, clients, temperature):
+    # If servers reach 0
+    if servers <= 0:
+        print("All servers stopped working")
+        print("You lost")
+        return False
 
-# Si los servidores llegan a 0
-if servidores <= 0:
-    print(" Todos los servidores dejaron de funcionar")
-    derrota = True
+    # If cooling reaches 0
+    if cooling <= 0:
+        print("The cooling system collapsed")
+        print("You lost")
+        return False
 
-# Si la refrigeración llega a 0
-if refrigeracion <= 0:
-    print(" El sistema de refrigeración colapsó")
-    derrota = True
+    # If clients are greater than or equal to servers
+    if clients >= servers:
+        print("You lost all your clients")
+        print("You lost")
+        return False
 
-# Si los clientes llegan a 0
-if clientes <= 0:
-    print(" Perdiste todos los clientes")
-    derrota = True
+    # Critical temperature event
+    if temperature > 80:
+        print("Temperature higher than 80°C")
+        print("SERVERS BURNED")
+        print("You lost")
+        return False
 
-# Evento crítico de temperatura
-if temperatura > 80:
-    print("Temperatura mayor a 80°C")
-    print("SERVIDORES QUEMADOS")
-    derrota = True
-    
+GameOver(7, 5, 6, 60)
