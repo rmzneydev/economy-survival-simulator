@@ -1,38 +1,46 @@
 import random
 
+events = [
+        "Temperature > 80Â°C",
+        "Failure in the cooling system",
+        "Electrical overload",
+        "Fire in technical room",
+        "Flooding due to broken pipe",
+        "Cyberattack",
+        "Network collapse",
+        "Internal virus"
+      ]
 
-event = ""
-def gen_evento():
- random_event = random.randint(1, 9)
 
- if random_event == 1:
-    event = "temperature to 80°C"
-        
- elif random_event == 2:
-    event = "failure in the cooling system"
+def gen_difficulty():
+    difficulty = random.randint(1, 3)
+    if difficulty == 1:
+        return random.randint(5, 10)
+    elif difficulty == 2:
+        return random.randint(15, 30)
+    elif difficulty == 3:
+        return random.randint(31, 40)
 
- elif random_event == 3:
-    event = "electrical overload"
+probability = gen_difficulty()/len(events)
 
- elif random_event == 4:
-    event = "fire in technical room"
+
+accumulate=0
+rangos=[]
+
+
+for i in range (len(events)):
+    accumulate += probability
+    rangos.append(accumulate)
     
- elif random_event == 5:
-    event = "flooding due to broken pipe"
 
- elif random_event == 6:
-    event = "cyber attack"
+random_num = random.randint(1, 100) 
 
- elif random_event == 7:
-    event = "network collapse"
-    
- elif random_event == 8:
-    event = "internal virus"
+range_accumulate=0
+event="quiet day"
 
- elif random_event == 9:
-    event = "quiet day"
- print("The event was presented:", event)
-
- return [random_event, event]
+for i in range (len(rangos)):
+    if random_num>=range_accumulate and random_num<=rangos[i]:
+        event= events[i]
+        range_accumulate=rangos[i]                        
 
 
