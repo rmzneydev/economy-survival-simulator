@@ -89,6 +89,23 @@ def calculate_consumption(number_of_event:int, difficult:int, resources:list):
     
     return consumption_array
 
+#Funcion para aumentar la temperatura
+def increase_temperature(event:int, temperature_after:int):
+
+    #Variable de incremento
+    increase = 0
+    #Verifica si el evento hace parte de los primeros.(Estos suben mas la temperatura)
+    if event >= 1 and event <= 4:
+        increase = random.randint(8, 10)
+        temperature_before = temperature_after - increase
+        
+    #Verifica si el evento hace parte de los primeros.(Estos suben menos la temperatura)
+    if event >= 5 and event <= 8:
+        increase = random.randint(5, 7)
+        temperature_before = temperature_after - increase
+
+    return temperature_before
+
 num = int(input("Evento -> "))
 dif = int(input("Difficult -> "))
 rec_list = [50, 50, 0]
