@@ -40,12 +40,16 @@ def MainLoop():
         temperature_before = increase_temperature(number_of_event, resource[3])
         consumption.append(temperature_before)
         resource = consumption
-                      
+
+        input("Press any keys for continue to the next day: ")
 
 
 
-        
 
+
+
+              
+                     
         Day += 1
         if current_day == 6:
             current_day = 0
