@@ -33,16 +33,14 @@ def MainLoop():
         print("Day", Day, ": ", days[current_day])
         event = get_events(difficult)
         number_of_event = event[0]
-        print("evento: ", number_of_event)
-        print("Temperatura", resource[3])
-
+      
+        
         consumption = calculate_consumption(number_of_event, difficult, resource, current_day)
-        print(consumption)
         temperature_before = increase_temperature(number_of_event, resource[3])
         consumption.append(temperature_before)
         resource = consumption
-        print(resource)
-        
+                      
+
 
 
         

@@ -49,7 +49,6 @@ def getResources(difficulty):
         temperature = 30    
         clients = 0
         
-        print(f"level: easy\n, server_capacity: {server_capacity}\n, temperature: {temperature}\n, clients: {clients}")
     
     elif difficulty == 2:
         server_capacity = 50
@@ -57,15 +56,13 @@ def getResources(difficulty):
         temperature = 30   
         clients = 0
         
-        print(f"level: medium\n, server_capacity: {server_capacity}\n, temperature: {temperature}\n, clients: {clients}")
         
     elif difficulty == 3:
         server_capacity = 20
         temperature = 30    
         cooling = 20
         clients = 0
-        
-        print(f"level: hard\n, server_capacity: {server_capacity}\n, temperature: {temperature}\n, clients: {clients}")  
+          
     
     resources = [server_capacity, cooling, clients, temperature]
 
