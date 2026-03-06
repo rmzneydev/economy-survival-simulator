@@ -32,6 +32,7 @@ def MainLoop():
         #Mostrar en consola el día que está, el evento y el consumo del recurso
         print("Day", Day, ": ", days[current_day])
         event = get_events(difficult)
+        print("Events: ", event[1])
         number_of_event = event[0]
       
         

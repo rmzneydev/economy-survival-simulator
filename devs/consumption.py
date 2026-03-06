@@ -118,7 +118,7 @@ def calculate_consumption(number_of_event:int, difficult:int, resources:list, da
             elif number_of_event == 0:
                     for i in range(1, 4):
                         resource_before = resources[resource_id] - 1
-                        print(resource_before)
+                        #print(resource_before)
                         if i == 3:
                             resource_before = resources[resource_id] + 1
                         consumption_array.append(resource_before)
