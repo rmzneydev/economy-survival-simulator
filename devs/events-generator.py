@@ -46,5 +46,5 @@ def get_events(difficulty):
          range_accumulate=rangos[i]   
          print(event)
          print(range_accumulate)                     
-
+get_events=(1)
 
