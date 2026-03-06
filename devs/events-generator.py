@@ -1,47 +1,49 @@
 import random
 
+def get_events(difficulty):
+      
+   events = [
+         "Temperature > 80°C",
+         "Failure in the cooling system",
+         "Electrical overload",
+         "Fire in technical room",
+         "Flooding due to broken pipe",
+         "Cyberattack",
+         "Network collapse",
+         "Internal virus"
+         ]
 
-
-random_event = random.randint(1, 10)
-print(random_event)
-
-if random_event == 1:
-    print=("ola de calor extrema")
-    
-if random_event == 2:
-    print=("falla en el sistema de refrigeracion")
-
-if random_event == 3:
-    print=("sobrecarga electrica")
-
-if random_event == 4:
-    print=("incendio en sala tecnica")
-    
-if random_event == 5:
-    print=("inundaciones por tuberia rota")
-
-if random_event == 6:
-    print=("ciberataque")
-
-if random_event == 7:
-    print=("colapso de la red")
-    
-if random_event == 8:
-    print=("virus interno")
-
-if random_event == 9:
-    print=("terremoto")
-
-if random_event == 10:
-    print=("recorte de personal")
-    
-
-
+   probability = 0
    
-       
+   if difficulty == 1:
+      probability = random.randint(5, 10)
+   elif difficulty == 2:
+      probability = random.randint(15, 30)
+   elif difficulty == 3:
+      probability = random.randint(31, 40)
+
+   base_probability = probability / len(events)
 
 
- 
+   accumulate=0
+   range_event=[]
 
+
+   for i in range (len(events)):
+      accumulate += base_probability
+      range_event.append(accumulate)
+      
+
+   random_num = random.randint(1, 100) 
+
+   range_accumulate=0
+   event="quiet day"
+
+   for i in range (len(range_event)):
+     if random_num>=range_accumulate and random_num<=range_event[i]:
+      return [i+1, event]
+   range_accumulate=range_event[i]   
+
+   return 0, event
 
 
