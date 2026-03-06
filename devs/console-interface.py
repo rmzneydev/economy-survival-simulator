@@ -1,107 +1,109 @@
-
-# interfaz.py - Punto 6: Interfaz de Consola
-
-
-# -- FUNCIONES DE AYUDA (Para decorar) --
-
-def imprimir_separador(caracter="-", largo=40):
-    """Imprime una línea decorativa."""
-    print(caracter * largo)
-
-def imprimir_titulo(texto):
-    """Imprime un título centrado y decorado."""
-    imprimir_separador("=")
-    print(f" {texto.upper()} ".center(40, "="))
-    imprimir_separador("=")
+ #interface.py - Point 6: Console Interface
 
 
-# -- FUNCIONES PRINCIPALES --
+# -- HELPER FUNCTIONS (For decoration) --
 
-def mostrar_bienvenida():
-    """Muestra el mensaje inicial del programa."""
-    print("\n" * 2) # Espacio en blanco arriba
-    imprimir_titulo("SIMULADOR DATA CENTER")
-    print("\n Bienvenido/a al sistema de control.")
-    print(" Tu misión: Mantener los servidores frescos y a los clientes felices.")
-    print(" ¡Mucha suerte!")
+def print_separator(character="-", length=40):
+    """Prints a decorative line."""
+    print(character * length)
+
+def print_title(text):
+    """Prints a centered and decorated title."""
+    print_separator("=")
+    print(f" {text.upper()} ".center(40, "="))
+    print_separator("=")
+
+
+# -- MAIN FUNCTIONS --
+
+def show_welcome():
+    """Displays the initial message of the program."""
+    print("\n" * 2)  # Blank space above
+    print_title("DATA CENTER SIMULATOR")
+    print("\n Welcome to the control system.")
+    print(" Your mission: Keep the servers cool and the clients happy.")
+    print(" Good luck!")
     print("\n")
-    imprimir_separador("*", 40)
+    print_separator("*", 40)
 
 
-def mostrar_resumen_jugador(nombre, dificultad):
-    """Muestra un resumen de los datos del jugador."""
-    print("\n[ DATOS DEL JUGADOR ]")
-    imprimir_separador(".")
-    # Usamos f-strings para insertar las variables
-    print(f" Nombre del Operador: {nombre}")
+def show_player_summary(name, difficulty):
+    """Displays a summary of the player data."""
+    print("\n[ PLAYER DATA ]")
+    print_separator(".")
     
-    # Traducimos el número de dificultad a texto
-    texto_dif = ""
-    if dificultad == "1": texto_dif = "Fácil"
-    elif dificultad == "2": texto_dif = "Medio"
-    elif dificultad == "3": texto_dif = "Difícil"
-    else: texto_dif = "Desconocida"
+    # Using f-strings to insert variables
+    print(f" Operator Name: {name}")
     
-    print(f" Nivel de Dificultad: {texto_dif}")
-    imprimir_separador(".")
-
-
-def mostrar_tabla_recursos(servidores, temp, clientes):
-    """
-    Muestra los recursos actuales en formato de tabla
-    usando caracteres básicos (| y -).
-    """
-    print("\n[ ESTADO ACTUAL DEL CENTRO DE DATOS ]")
-    
-    # Diseño de la tabla con guiones y barras
-    print("+----------------------+----------+")
-    print("| RECURSO              | VALOR    |")
-    print("+----------------------+----------+")
-    
-    # Fila de Servidores
-    # :<20 alinea a la izquierda en 20 espacios
-    # :>8 alinea a la derecha en 8 espacios
-    print(f"| Capacidad Servidores | {servidores:<8} |")
-    
-    # Fila de Temperatura (con aviso visual si está alta)
-    aviso_temp = ""
-    if temp > 70:
-        aviso_temp = "!! CALIENTE !!"
-    
-    print(f"| Temperatura Actual   | {temp:<8} C | {aviso_temp}")
-    
-    # Fila de Clientes
-    print(f"| Clientes Conectados  | {clientes:<8} |")
-    
-    # Línea final
-    print("+----------------------+----------+")
-
-
-def mostrar_fin_juego(causa):
-    """Muestra un mensaje visual de fin de juego."""
-    print("\n" * 3)
-    imprimir_titulo("GAME OVER")
-    print("\n El simulador ha terminado.")
-    
-    if causa == "temperatura":
-        print(" ¡CRÍTICO! Los servidores superaron los 80°C y se quemaron.")
-        print(" Revisa el sistema de refrigeración la próxima vez.")
-    elif causa == "clientes":
-        print(" ¡AVISO! Demasiados clientes para la capacidad actual.")
-        print(" Se han perdido ingresos importantes.")
+    # Translate the difficulty number to text
+    difficulty_text = ""
+    if difficulty == "1":
+        difficulty_text = "Easy"
+    elif difficulty == "2":
+        difficulty_text = "Medium"
+    elif difficulty == "3":
+        difficulty_text = "Hard"
     else:
-        print(f" Fin de la simulación por: {causa}")
+        difficulty_text = "Unknown"
+    
+    print(f" Difficulty Level: {difficulty_text}")
+    print_separator(".")
+
+
+def show_resources_table(servers, temp, clients):
+    """
+    Displays the current resources in a table format
+    using basic characters (| and -).
+    """
+    print("\n[ CURRENT DATA CENTER STATUS ]")
+    
+    # Table design with dashes and bars
+    print("+----------------------+----------+")
+    print("| RESOURCE             | VALUE    |")
+    print("+----------------------+----------+")
+    
+    # Servers row
+    print(f"| Server Capacity      | {servers:<8} |")
+    
+    # Temperature row (with visual warning if too high)
+    temp_warning = ""
+    if temp > 70:
+        temp_warning = "!! HOT !!"
+    
+    print(f"| Current Temperature  | {temp:<8} C | {temp_warning}")
+    
+    # Clients row
+    print(f"| Connected Clients    | {clients:<8} |")
+    
+    # Final line
+    print("+----------------------+----------+")
+
+
+def show_game_over(reason):
+    """Displays a visual game over message."""
+    print("\n" * 3)
+    print_title("GAME OVER")
+    print("\n The simulator has ended.")
+    
+    if reason == "temperature":
+        print(" CRITICAL! The servers exceeded 80°C and burned out.")
+        print(" Check the cooling system next time.")
+    elif reason == "clients":
+        print(" WARNING! Too many clients for the current capacity.")
+        print(" Significant revenue has been lost.")
+    else:
+        print(f" Simulation ended due to: {reason}")
         
-    print("\n Gracias por jugar.")
-    imprimir_separador("=")
+    print("\n Thanks for playing.")
+    print_separator("=")
     print("\n")
 
 
-# -- PRUEBA RAPIDA (Opcional) --
-# Si ejecutas este archivo directamente, verás cómo quedan los dibujos.
+# -- QUICK TEST (Optional) --
+# If you run this file directly, you will see how the interface looks.
 if __name__ == "__main__":
-    mostrar_bienvenida()
-    mostrar_resumen_jugador("Sam", "2")
-    mostrar_tabla_recursos(100, 30, 100) # Todo bien
-    # mostrar_tabla_recursos(50, 75, 120)  # Ejemplo con temperatura alta
-    # mostrar_fin_juego("temperatura")
+    show_welcome()
+    show_player_summary("Sam", "2")
+    show_resources_table(100, 30, 100)  # Everything OK
+    # show_resources_table(50, 75, 120)  # Example with high temperature
+    # show_game_over("temperature")
