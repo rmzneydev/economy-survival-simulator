@@ -94,7 +94,6 @@ def calculate_consumption(number_of_event:int, difficult:int, resources:list, da
                     consumption_array.append(resource_before)
             #Verifica si es un evento existente
             if number_of_event >= 2 and number_of_event <= 8:
-                print("hello")
                 for i in range(1, 4):
                     if day == 1 or day == 2:                        
                         consumption = 2.8
