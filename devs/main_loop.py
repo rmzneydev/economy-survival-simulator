@@ -1,16 +1,16 @@
 import random
-# from data_entry import setName, setDifficult, getResources
-
-# name = setName()
-# difficult = setDifficult()
-# resource = getResources(difficult) 
-
+from data_entry import setName, setDifficult, getResources
+from events_generator import get_events
+from consumption import calculate_consumption, increase_temperature
 
 
 
 def MainLoop(): 
 
     # Creación de variables de prueba
+    name = setName()
+    difficult = setDifficult()
+    resource = getResources(difficult) 
 
     Day = 1
     GameOver = 0
@@ -28,9 +28,23 @@ def MainLoop():
 
     #Bucle while para repetir los 10 días del juego
     while Day <= 10 or GameOver == True:
-        
+
         #Mostrar en consola el día que está, el evento y el consumo del recurso
         print("Day", Day, ": ", days[current_day])
+        event = get_events(difficult)
+        number_of_event = event[0]
+        print("evento: ", number_of_event)
+        print("Temperatura", resource[3])
+
+        consumption = calculate_consumption(number_of_event, difficult, resource, current_day)
+        print(consumption)
+        temperature_before = increase_temperature(number_of_event, resource[3])
+        consumption.append(temperature_before)
+        resource = consumption
+        print(resource)
+        
+
+
         
 
         Day += 1

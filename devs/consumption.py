@@ -131,22 +131,20 @@ def increase_temperature(event:int, temperature_after:int):
 
     #Variable de incremento
     increase = 0
-    if event == 1:
-            temperature_before = 81
-    #Verifica si el evento hace parte de los primeros.(Estos suben mas la temperatura)
-    if event >= 2 and event <= 4:
-        increase = random.randint(8, 10)
-        temperature_before = temperature_after - increase
-        
-    #Verifica si el evento hace parte de los primeros.(Estos suben menos la temperatura)
-    if event >= 5 and event <= 8:
-        increase = random.randint(5, 7)
-        temperature_before = temperature_after - increase
+    if event != 0:
+        temperature_before = 0
+        if event == 1:
+                temperature_before = 81
+        #Verifica si el evento hace parte de los primeros.(Estos suben mas la temperatura)
+        if event >= 2 and event <= 4:
+            increase = random.randint(8, 10)
+            temperature_before = temperature_after + increase
+            
+        #Verifica si el evento hace parte de los primeros.(Estos suben menos la temperatura)
+        if event >= 5 and event <= 8:
+            increase = random.randint(5, 7)
+            temperature_before = temperature_after + increase
+    else:
+        temperature_before = temperature_after
 
     return temperature_before
-
-num = int(input("Evento -> "))
-dif = int(input("Difficult -> "))
-rec_list = [50, 50, 0]
-day = 6
-print(calculate_consumption(num, dif, rec_list, day))
