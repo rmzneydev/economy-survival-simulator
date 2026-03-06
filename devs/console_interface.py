@@ -99,11 +99,11 @@ def show_game_over(reason):
     print("\n")
 
 
-# -- QUICK TEST (Optional) --
-# If you run this file directly, you will see how the interface looks.
-if __name__ == "__main__":
-    show_welcome()
-    show_player_summary("Sam", "2")
-    show_resources_table(100, 30, 100)  # Everything OK
-    # show_resources_table(50, 75, 120)  # Example with high temperature
-    # show_game_over("temperature")
+# # -- QUICK TEST (Optional) --
+# # If you run this file directly, you will see how the interface looks.
+# if __name__ == "__main__":
+#     show_welcome()
+#     show_player_summary("Sam", "2")
+#     show_resources_table(100, 30, 100)  # Everything OK
+#     # show_resources_table(50, 75, 120)  # Example with high temperature
+#     # show_game_over("temperature")
