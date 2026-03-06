@@ -43,7 +43,22 @@ Generated with `random.randint()`:
 ## How to Run the Project
 From the terminal:
 
-python inicio.py
+clone the repository
+```bash
+git clone https://github.com/rmzneydev/economy-survival-simulator.git
+cd economy-survival-simulator
+```
+Since it's still in development, it's necessary to use Git.
+And then choose the dev branch.
+```bash
+git switch dev
+cd devs
+```
+To start playing run the following command:
+```bash
+pyhton main_loop.py
+```
+
 
 ## Failure Conditions
 - Temperature > 80°C
