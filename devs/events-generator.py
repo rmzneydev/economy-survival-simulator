@@ -1,10 +1,9 @@
 import random
 
-
 def get_events(difficulty):
       
    events = [
-         "Temperature > 80Â°C",
+         "Temperature > 80°C",
          "Failure in the cooling system",
          "Electrical overload",
          "Fire in technical room",
@@ -27,12 +26,12 @@ def get_events(difficulty):
 
 
    accumulate=0
-   rangos=[]
+   range_event=[]
 
 
    for i in range (len(events)):
-      accumulate += probability
-      rangos.append(accumulate)
+      accumulate += base_probability
+      range_event.append(accumulate)
       
 
    random_num = random.randint(1, 100) 
@@ -40,11 +39,11 @@ def get_events(difficulty):
    range_accumulate=0
    event="quiet day"
 
-   for i in range (len(rangos)):
-      if random_num>=range_accumulate and random_num<=rangos[i]:
-         event= events[i]
-         range_accumulate=rangos[i]   
-         print(event)
-         print(range_accumulate)                     
-get_events=(1)
+   for i in range (len(range_event)):
+     if random_num>=range_accumulate and random_num<=range_event[i]:
+      return [i+1, event]
+   range_accumulate=range_event[i]   
+
+   return 0, event
+
 
