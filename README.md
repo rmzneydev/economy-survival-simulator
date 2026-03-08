@@ -1,83 +1,58 @@
-# economy-survival-simulator
-This project consists of a 10-day resource management simulator, where the player manages a Data Center.
-def print_separator(character="-", length=40):
-    """Prints a decorative line."""
-    print(character * length)
+# Economy Survival Simulator
+## Data Center Management
+---
+## Project Description
+This project consists of a 10-day resource management simulator where the player manages a data center.
 
-def print_title(text):
-    """Prints a centered and decorated title."""
-    print_separator("=")
-    print(f" {text.upper()} ".center(40, "="))
-    print_separator("=")
+The objective is to keep the servers operational by controlling:
+- Server Capacity
+- Cooling
+- Clients
+  
+The program is developed using only:
+- `while` loops
+- `if/else` statements
+- `print`
 
+## Game Rules
 
-def show_welcome():
-    """Displays the initial message of the program."""
-    print("\n" * 2)  # Blank space above
-    print_title("DATA CENTER SIMULATOR")
-    print("\n Welcome to the control system.")
-    print(" Your mission:\n Keep the servers cool and the clients happy.")
-    print(" Good luck!")
-    print("\n")
-    print_separator("*", 40)
+1. The player selects a name and difficulty level.
 
+2. The simulation lasts 10 days.
 
-def show_player_summary(name, difficulty):
-    """Displays a summary of the player data."""
-    print("\n[ PLAYER DATA ]")
-    print_separator(".")
-    
-    print(f" Operator Name: {name}")
-    
-    difficulty_text = ""
-    if difficulty == 1:
-        difficulty_text = "Easy"
-    elif difficulty == 2:
-        difficulty_text = "Medium"
-    elif difficulty == 3:
-        difficulty_text = "Hard"
-    else:
-        difficulty_text = "Unknown"
-    
-    print(f" Difficulty Level: {difficulty_text}")
-    print_separator(".")
+3. Random events can occur each day.
 
+4. If the temperature exceeds **80°C**, the servers will crash (Game Over).
 
-def show_resources_table(servers, cooling, clients, temp):
-    """
-    Displays the current resources in a table format
-    using basic characters (| and -).
-    """
-    
-    temp = str(f"{temp}°C")
-    cooling = str(f"{cooling:.1f}")
+5. If a resource reaches 0, the game ends.
 
-    print("\n[ CURRENT DATA CENTER STATUS ]")
-    print("+----------------------+----------+")
-    print("| RESOURCE             | VALUE    |")
-    print("+----------------------+----------+")
-    print(f"| Server Capacity      | {servers:<8} |")
-    print(f"| Cooling              | {cooling:<8} |")
-    print(f"| Current Temperature  | {temp:<8} |")
-    print(f"| Connected Clients    | {clients:<8} |")
-    print("+----------------------+----------+")
+6. If there are more clients than server capacity, revenue is lost.
 
+## Game Resources
+- **Server Capacity**
+- **Cooling (Temperature Control)**
+- **Clients**
+- **System Temperature**
 
-def show_game_over(reason):
-    """Displays a visual game over message."""
-    print("\n" * 3)
-    print_title("GAME OVER")
-    print("\n The simulator has ended.")
-    
-    if reason == "temperature":
-        print(" Reason:\n The servers temperature exceeded 80°C and burned out.")
-        print(" Check the cooling system next time.")
-    elif reason == "clients":
-        print(" Reason:\n Too many clients for the current server capacity.")
-        print(" Significant revenue has been lost.")
-    else:
-        print(f" Simulation ended due to: \n{reason}")
-        
-    print("\n Thanks for playing.")
-    print_separator("=")
-    print("\n")
+## Random Events
+Generated with `random.randint()`:
+- Storm (affects cooling)
+- Theft (reduces resources)
+- Bonanza (increases customers)
+
+## How to Run the Project
+From the terminal:
+
+python inicio.py
+
+## Failure Conditions
+- Temperature > 80°C
+- Server Capacity = 0
+- Cooling = 0
+- Clients = 0
+
+## Final Objective
+To survive 10 days while maintaining a balance between:
+- Customer demand
+- Operational capacity
+- Thermal control
