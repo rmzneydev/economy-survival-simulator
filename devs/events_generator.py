@@ -15,8 +15,6 @@ def get_events(difficulty):
 
    probability = 0 # probabilidad total de que ocurra un evento
 
-  
-   
    if difficulty == 1:
       probability = random.randint(5, 10)
    elif difficulty == 2:
