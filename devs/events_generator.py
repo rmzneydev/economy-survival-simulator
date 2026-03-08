@@ -40,8 +40,7 @@ def get_events(difficulty):
 
    for i in range (len(range_event)):
      if random_num>=range_accumulate and random_num<=range_event[i]:
-       # Si cae en el rango, se retorna el número de evento y su descripción
-      return [i+1, event]
+      return [i+1, events[i]]
    range_accumulate=range_event[i]   
    # Si no cayó en ningún rango, significa que no ocurrió ningún evento
    return 0, event
