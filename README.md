@@ -22,7 +22,6 @@ The project was developed as part of a collaborative exercise, applying agile me
   - [How to Play](#how-to-play)
 - [Project Structure](#project-structure)
 - [Development Team](#development-team)
-- [License](#license)
 
 ## Overview
 
@@ -151,12 +150,12 @@ development**.
 
 | Role | Responsibility | Module | Name |
 |------------|--------|--------|--------|
-| Dev 1|            Data Input System | data_entry.py | [Samuel ](https://github.com/smlprtz992-dot)
+| Dev 1|            Data Input System | data_entry.py | [Samuel P.](https://github.com/smlprtz992-dot)
 | Dev 2|            Main Simulation Loop | main_loop.py | [Andres E.](https://github.com/dresanelles)
 | Dev 3|            Event Generator | events_generator.py | [Camilo C.](https://github.com/CAMC2901)
 | Dev 4|            Resource Consumption Logic | consumption.py | [Plinio A.](https://github.com/ChristianCode89)
 | Dev 5|            Defeat Validator | defeat_validator.py | [Jhosep A.](https://github.com/jhosep-1997)
-| Dev 6|            Console Interface | console_interface.py | [Jhonatan R-](https://github.com/rodriguezvjhona-droid)
+| Dev 6|            Console Interface | console_interface.py | [Jhonatan R.](https://github.com/rodriguezvjhona-droid)
 | Scrum Master|     Documentation and README | LOG.md /README.MD | [Neyder R.](https://github.com/rmzneydev)
 | Product Owner|    Testing and validation | tests.py | [Sharon M.](https://github.com/Zolagos)
 
