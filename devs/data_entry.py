@@ -6,7 +6,7 @@ def setName():
     print("----Initial configuration - data center----\n")
 
     print(f"\n----player----")
-    name = str(input("Enter the player's name: "))
+    name = input("Enter the player's name: ")
 
     return name
 
