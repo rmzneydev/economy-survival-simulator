@@ -21,7 +21,7 @@ The project was developed as part of a collaborative exercise, applying agile me
   - [Installation](#installation)
   - [How to Play](#how-to-play)
 - [Project Structure](#project-structure)
-- [Development Team](#development-team)
+- [Project Team](#project-team)
 
 ## Overview
 
@@ -142,13 +142,12 @@ data-center-control/
 └── README.md                  # This file
 ```
 
-### Development Team
+### Project Team
 
 This project follows a collaborative structure inspired by **Agile
 development**.
 
-
-| Role | Responsibility | Module | Name |
+| Role | Responsibility | Module | Collaborator profile |
 |------------|--------|--------|--------|
 | Dev 1|            Data Input System | data_entry.py | [Samuel P.](https://github.com/smlprtz992-dot)
 | Dev 2|            Main Simulation Loop | main_loop.py | [Andres E.](https://github.com/dresanelles)
